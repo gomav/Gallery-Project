@@ -23,7 +23,7 @@
 
             //building the image (get image source); clicking on an image triggers the overlay for
             //the entire screen and not for the targetted image
-            var imageSrc = e.target.src
+            var imageSrc = e.target.src;
 
             //creating the image
             var popUpImage = document.createElement('img');
@@ -50,14 +50,20 @@
                     overlay.style.top = window.pageYOffset + 'px';
                     overlay.style.left = window.pageXOffset + 'px';
                 }
-            })
+            });
 
-            console.log(popUpImage);
+            //set overlay to resize when the window is resized
+            window.addEventListener('resize', function(){
+                overlay.style.width = window.innerWidth + 'px';
+                overlay.style.height = window.innerHeight + 'px';
+            });
 
-        }
+            //console.log(popUpImage);
 
-    });
+        }   //check the image is being clicked
+
+    });     //Event listener for the div with the calls of carimages
 
 
 
-}());
+}());//enables the document to load first
