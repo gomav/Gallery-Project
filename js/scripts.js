@@ -1,5 +1,5 @@
+'use strict';
 (function(){
-"use strict";
     var carimages = document.querySelector('.carimages');
 
     carimages.addEventListener('click', function(e){
