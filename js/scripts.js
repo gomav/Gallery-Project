@@ -19,9 +19,20 @@
             overlay.style.width = window.innerWidth + "px";
             overlay.style.height = window.innerHeight + "px";
 
+            //building the image (get image source); clicking on an image triggers the overlay for
+            //the entire screen and not for the targetted image
+
+            var imageSrc = e.target.src
+
+            //creating the image
+
+            var popUpImage = document.createElement('img');
+            popUpImage.id = 'popimage';
+            popUpImage.src = imageSrc;
+
             document.body.appendChild(overlay);
 
-            console.log(e.target.tagName);
+            console.log(popUpImage);
 
         }
 
