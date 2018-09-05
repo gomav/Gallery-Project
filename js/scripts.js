@@ -43,6 +43,12 @@
             //append the image to the overlay
 
             overlay.appendChild(popUpImage);
+            popUpImage.addEventListener('click', function(){
+
+                if(overlay){
+                    overlay.parentElement.removeChild(overlay);
+                }
+            });
 
             console.log(popUpImage);
 
