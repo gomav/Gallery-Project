@@ -15,21 +15,17 @@
             overlay.style.cursor = 'pointer';
 
             //Set some sizes for the overlay
-
             overlay.style.width = window.innerWidth + "px";
             overlay.style.height = window.innerHeight + "px";
 
             //append the overlay to the body
-
             document.body.appendChild(overlay);
 
             //building the image (get image source); clicking on an image triggers the overlay for
             //the entire screen and not for the targetted image
-
             var imageSrc = e.target.src
 
             //creating the image
-
             var popUpImage = document.createElement('img');
             popUpImage.id = 'popimage';
             popUpImage.src = imageSrc;
@@ -41,14 +37,20 @@
             popUpImage.style.marginTop = '10%';
 
             //append the image to the overlay
-
             overlay.appendChild(popUpImage);
             popUpImage.addEventListener('click', function(){
-
                 if(overlay){
                     overlay.parentElement.removeChild(overlay);
                 }
             });
+
+            //set the image to follow windows/display scroll
+            window.addEventListener('scroll', function(){
+                if(overlay){
+                    overlay.style.top = window.pageYOffset + 'px';
+                    overlay.style.left = window.pageXOffset + 'px';
+                }
+            })
 
             console.log(popUpImage);
 
