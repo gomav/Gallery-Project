@@ -54,6 +54,17 @@
                     <img src="images/car8.jpg" alt="" class="img-responsive">
                 </a>
             </div>
+            <div class="col-sm-3 image grid-item">
+                <a href="" class="thumbnail">
+                    <img src="images/car1.jpg" alt="" class="img-responsive">
+                </a>
+            </div>
+            <div class="col-sm-3 image grid-item">
+                <a href="" class="thumbnail">
+                    <img src="images/car3.jpg" alt="" class="img-responsive">
+                </a>
+            </div>
+
 
         </div>
 
@@ -63,6 +74,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        $('body').masonry({
+            itemSelector: '.image',
+            isAnimated: true,
+            isFitwidth: true
+        });
+    </script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
