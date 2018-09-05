@@ -19,6 +19,10 @@
             overlay.style.width = window.innerWidth + "px";
             overlay.style.height = window.innerHeight + "px";
 
+            //append the overlay to the body
+
+            document.body.appendChild(overlay);
+
             //building the image (get image source); clicking on an image triggers the overlay for
             //the entire screen and not for the targetted image
 
@@ -30,7 +34,15 @@
             popUpImage.id = 'popimage';
             popUpImage.src = imageSrc;
 
-            document.body.appendChild(overlay);
+            //style the image
+            popUpImage.style.display = 'block';
+            popUpImage.style.width = '50';
+            popUpImage.style.margin = '0 auto';
+            popUpImage.style.marginTop = '10%';
+
+            //append the image to the overlay
+
+            overlay.appendChild(popUpImage);
 
             console.log(popUpImage);
 
